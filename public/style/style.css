@@ -1,0 +1,396 @@
+    .nav-wrapper {
+        text-align: left;
+        background-color: #212121;
+        width: 100%;
+        font-size: 28px;
+        height: 60px;
+        font: 400 130px/0.8 'Cookie', Helvetica, sans-serif;
+        color: #fff;
+        text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+        padding-left: 40px;
+    }
+    
+    #divFiltro {
+        padding-left: 35%;
+        align-content: center;
+    }
+    
+    #filtro {
+        width: 40%;
+    }
+    
+    .breadcrumb {
+        height: 30px;
+        font-size: 26px;
+        background-color: white;
+        font-family: serif;
+        width: 100%;
+        color: red;
+    }
+    
+    .breadcrumb li {
+        color: red;
+    }
+    
+    .breadcrumb:last-child {
+        color: black;
+    }
+    
+    .nav-wrappery {
+        text-align: center;
+        background-color: white;
+        width: 100%;
+        font-size: 28px;
+        height: 60px;
+        font: 400 130px/0.8 'Cookie', Helvetica, sans-serif;
+        color: red;
+        text-shadow: 4px 4px 3px rgba(0, 0, 0, 0.1);
+        padding-left: 40px;
+    }
+    
+    .nav-wrappe {
+        text-align: center;
+        width: 100%;
+        height: 60px;
+    }
+    
+    .fundo {
+        align-content: center;
+        width: 100%;
+        height: 40px;
+        padding: 6px;
+    }
+    
+    .item {
+        align-content: center;
+        width: 160px;
+    }
+    
+    .title p {
+        font-size: 18;
+    }
+    
+    .collection {
+        border-radius: 12px;
+        cursor: pointer;
+    }
+    
+    .alert {
+        margin-top: 30px;
+    }
+    
+    .p {
+        margin-top: 30px;
+        font-size: 12px;
+    }
+    
+    .ul {
+        font-size: 45px;
+        width: 100%;
+    }
+    
+    .ul {
+        width: 100%;
+    }
+    
+    .li {
+        width: 100%;
+    }
+    
+    .a h2 {
+        text-align: center;
+        text-decoration: none;
+        height: 20px;
+    }
+    
+    a:visited h2 {
+        text-decoration: none;
+    }
+    
+    a:active h2 {
+        text-decoration: none;
+    }
+    
+    a:link h2 {
+        text-decoration: none;
+    }
+    
+    img {
+        width: 100%;
+        height: auto;
+        /* altura  sempre metade do comprimento*/
+    }
+    
+    #logo {
+        width: 120px;
+        height: 60px;
+    }
+    
+    .imagens-upload {
+        display: none;
+    }
+    
+    .labelLogo {
+        font-size: 16px;
+    }
+    
+    .card {
+        margin-top: 0px;
+        margin-bottom: 1px;
+    }
+    
+    .span {
+        margin-right: 110px;
+        margin-left: 50px;
+        font-size: 24;
+    }
+    
+    .breadcrumb {
+        margin-top: 15px;
+    }
+    /*#mCertificadoDeclaracao {
+    text-align: left;
+    margin-right: 305px;
+    margin-left: 20px;
+    
+}*/
+    
+    .footer-copyright {
+        margin: auto;
+        width: 100%;
+        bottom: 0;
+        position: fixed;
+        font-size: 18px;
+        height: 60px;
+    }
+    
+    .page-footer {
+        text-align: center;
+        width: 100px;
+        height: 100px;
+        bottom: 0;
+        /**position: fixed;**/
+        text-align: center;
+        font-size: 18px;
+    }
+    
+    .ajuda {
+        font-family: serif;
+        font-size: 20px;
+        text-align: center;
+        margin-right: 20px;
+    }
+    
+    .dropdown-button {
+        font-family: serif;
+        font-size: 20px;
+        text-align: center;
+    }
+    
+    .dropdown-button2 {
+        font: 24px arial, helvetica, sans-aerif;
+        padding: 0px;
+        text-decoration: none;
+        text-align: right;
+        color: pink;
+        background: url('botao_link.gif') no-repeat center center;
+        width: 110px;
+        height: 36px;
+        display: inline;
+        margin-right: 10px;
+    }
+    
+    body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: column;
+    }
+    
+    main {
+        flex: 1 0 auto;
+    }
+    
+    .material-icons {
+        font-size: 30px;
+        color: #b71c1c;
+    }
+    
+    .item {
+        align-content: right;
+        width: 3px;
+        font-family: 'Arvo', Georgia, Times, serif;
+        font-size: 20px;
+    }
+    
+    #formModelo {
+        text-align: center;
+        margin-right: 10px;
+    }
+    
+    #manual {
+        width: 40px;
+    }
+    
+    .gerd {
+        cursor: pointer;
+    }
+    
+    .btn:hover {
+        color: #330000;
+        background-color: #FFFFFF;
+        /*CSS 3*/
+        border-radius: 10px 0px 10px 0px;
+    }
+    
+    .cert {
+        margin-left: 2px;
+        margin-bottom: 10px;
+        margin-top: 30px;
+    }
+    
+    .selected {
+        background: red;
+    }
+    
+    #selec {
+        background: red;
+    }
+    
+    .casa {
+        background: red;
+    }
+    
+    .input {
+        background: red;
+    }
+    
+    .select {
+        background: red;
+    }
+    
+    input:not([type]):focus:not([readonly]),
+    input[type=text]:focus:not([readonly]),
+    input[type=password]:focus:not([readonly]),
+    input[type=email]:focus:not([readonly]),
+    input[type=url]:focus:not([readonly]),
+    input[type=time]:focus:not([readonly]),
+    input[type=date]:focus:not([readonly]),
+    input[type=datetime]:focus:not([readonly]),
+    input[type=datetime-local]:focus:not([readonly]),
+    input[type=tel]:focus:not([readonly]),
+    input[type=number]:focus:not([readonly]),
+    input[type=search]:focus:not([readonly]),
+    textarea.materialize-textarea:focus:not([readonly]) {
+        border-bottom: 1px solid black !important;
+        box-shadow: 0 1px 0 0 black !important;
+    }
+    
+    .picker__date-display {
+        text-align: center;
+        background-color: rgba(154, 23, 23, 0.96);
+        ;
+        color: #fff;
+        padding-bottom: 15px;
+        font-weight: 300;
+    }
+    
+    .picker__weekday-display {
+        background-color: black;
+        padding: 10px;
+        font-weight: 200;
+        letter-spacing: .5;
+        font-size: 1rem;
+        margin-bottom: 15px;
+    }
+    
+    .picker__close,
+    .picker__today {
+        font-size: 1.1rem;
+        padding: 0 1rem;
+        color: rgba(154, 23, 23, 0.96);
+    }
+    
+    .btn-flat {
+        box-shadow: none;
+        background-color: transparent;
+        color: #ee6e73;
+        cursor: pointer;
+        transition: background-color .2s;
+    }
+    
+    .picker__day--selected,
+    .picker__day--selected:hover,
+    .picker--focused .picker__day--selected {
+        border-radius: 50%;
+        -webkit-transform: scale(0.9);
+        transform: scale(0.9);
+        background-color: rgba(154, 23, 23, 0.96);
+        color: #ffffff;
+    }
+    
+    .picker__day.picker__day--today {
+        color: #ee6e73;
+    }
+    
+    .dropdown-content li>a,
+    .dropdown-content li>span {
+        font-size: 16px;
+        color: rgba(154, 23, 23, 0.96);
+        display: block;
+        line-height: 22px;
+        padding: 14px 16px;
+    }
+    
+    textarea {
+        border-color: rgb(169, 169, 169);
+        border-top-color: rgb(169, 169, 169);
+        border-right-color: rgb(169, 169, 169);
+        border-bottom-color: rgb(169, 169, 169);
+        border-left-color: rgb(169, 169, 169);
+    }
+    
+    .listaMembros {
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+    
+    .busca {
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+    
+    .listaAtividades {
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+    
+    .secondary-content {
+        margin-bottom: 1000px;
+    }
+    
+    .selecionar {
+        cursor: pointer;
+    }
+    
+    .lista {
+        cursor: auto;
+    }
+    
+    [type="checkbox"]:checked+label:before {
+        top: -4px;
+        left: -5px;
+        width: 12px;
+        height: 22px;
+        border-top: 2px solid transparent;
+        border-left: 2px solid transparent;
+        border-right: 2px solid rgba(154, 23, 23, 0.96);
+        border-bottom: 2px solid rgba(154, 23, 23, 0.96);
+    }
+    
+    label {
+        text-transform: capitalize;
+    }
+    
+    .x:hover {
+        color: rgba(154, 23, 23, 0.96);
+    }

@@ -1,0 +1,36 @@
+<div class="fundo col s12 m12 l12 xl12">
+    <div class="text-right">
+        <a ui-sref="logout">LOGOUT</a>
+    </div>
+    <div class="busca form-group col s12 m4" id="divFiltro">
+        <input id="filtro" ng-model="filtro" type="search" class="form-control col s12 m4" placeholder="Digite sua busca. Ex: data, nome">
+    </div>
+    <div class="container">
+        <div class="row col s12 m12 l12 xl12">
+            <p ng-show="mensagem.texto">{{mensagem.texto}}</p>
+            <div ng-repeat="evento in eventos | filter: filtro">
+                <div class="col s12 m6">
+                    <ul class="collection" ui-sref="eventosDetalhes({id: evento._id})">
+                        <div class="black-text">
+                            <li class="collection-item avatar">
+                                <img class="responsive-img circle" src="{{evento.urlLogo}}" alt="">
+                                <span class="title">Evento:&nbsp;{{evento.nome}}</span>
+                                <p>Local:&nbsp;{{evento.local}} </p>
+                                <p class="black-text ">Início:
+                                    <a ng-bind="evento.dataInicial | date:'dd/MM/yyyy'" class="black-text"></a>
+                                </p>
+                                <p class="black-text ">Término:
+                                    <a ng-bind="evento.dataFinal | date:'dd/MM/yyyy'" class="black-text"></a>
+                                </p>
+                                <a class="secondary-content"><i class="gerd small material-icons" ng-click="remove(evento)">delete</i></a>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <button class="cert right btn red darken-4 btn-default" ng-click="proxima()">Próxima</button>
+        <button class="cert right btn red darken-4 btn-default" ng-click="anterior()">Anterior</button>
+    </div>
+</div>

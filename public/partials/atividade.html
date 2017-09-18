@@ -1,0 +1,103 @@
+<div class="fundo">
+    <div class="row">
+        <div id="atividade" class="col s12 m12">
+            <form id="fAtividade" name="fAtividade" ng-submit="salva(fAtividade)">
+                <!--publico ou privado-->
+                <div class="form-group col s12 m6">
+                    <select id="restricao" required ng-model="atividade.restricaoAcesso">
+                        <option value="" disabled selected>Escolha um tipo</option>
+                        <option value="Publica">Público</option>
+                        <option value="Privado">Privado</option>
+                    </select>
+                    <label>Público/Privado ?</label>
+                </div>
+                <!--lista de atividades-->
+                <div class="form-group col s12 m6">
+                    <select id="tipoAtividade" ng-model="atividade.tipo">
+                    <option value="" disabled selected>Escolha uma Atividade</option>
+                    <option value="Palestra">Palestra</option>
+                    <option value="Mini-curso">Minicurso</option>
+                    <option value="Oficina">Oficina</option>
+                    <option value="Curso">Curso</option>
+                    <option value="Apresentação de trabalho">Apresentação de trabalho</option>
+                    <option value="Atividade de campo">Atividade de campo</option>
+                    <option value="outro">Outro</option>
+                    <!--<option value=""></option>-->
+                    </select>
+                </div>
+                <div ng-hide="hide" class="ng-hide col s12 m12">
+                    <label ng-hide="hide" class="ng-hide" for="novoTipo">Novo tipo</label>
+                    <input ng-hide="hide" class="ng-hide" type="text" id="novoTipo" required ng-model="atividade.tipo">
+                </div>
+                <div class="form-group col s12 m12">
+                    <label for="nome">Nome da Atividade:</label>
+                    <input type="text" class="form-control" id="nome" name="nome" required ng-model="atividade.nome" />
+                </div>
+                <div class="form-group col s12 m12">
+                    <label for="descricao">Descrição:</label>
+                    <input id="descricao" name="descricao" type="text" class="validate" required ng-model="atividade.descricao">
+                </div>
+                <!--Div Datas iniciais e finais-->
+                <div class="form-group ng-hide col s12 m4" ng-hide="hidePublico">
+                    <label for="dataInicial">Data Inicial:</label>
+                    <input id="dataInicial" name="dataInicial" ng-model="dataInicialAtividade" type="text" class="datepicker">
+                    <!--<label for="dataFinal">Data Final:</label>
+                    <input id="dataFinal" name="dataFinal" ng-model="dataFinalAtividade" type="text" class="datepicker">-->
+                </div>
+                <div class="form-group ng-hide col s12 m4" ng-hide="hidePublico">
+                    <label for="horaInicial">Hora Inicial:</label>
+                    <input id="horaInicial" name="horaInicial" placeholder="Ex: 14:00" ng-model="horaInicialAtividade" type="time" class="timepicker">
+                </div>
+                <div class="form-group ng-hide col s12 m4" ng-hide="hidePublico">
+                    <label for="horaFinal">Hora Final:</label>
+                    <input id="horaFinal" name="horaFinal" placeholder="Ex: 14:00" ng-model="horaFinalAtividade" type="time" class="timepicker">
+                </div>
+                <div class="form-group ng-hide col s12 m4" ng-hide="hidePublico">
+                    <label for="cargaHoraria">Carga Horaria:</label>
+                    <input id="cargaHoraria" name="cargaHoraria" class="" type="number" class="validate" min="1" ng-model="atividade.cargaHoraria">
+                </div>
+                <div class="form-group ng-hide col s12 m4" ng-hide="hidePublico">
+                    <label for="vagas">Quantidade de Vagas:</label>
+                    <input id="vagas" type="number" class="validate ng-hide" ng-hide="hidePublico" ng-model="atividade.quantidadeVagas" min="1">
+                </div>
+                <div class="form-group col s12 m4">
+                    <label>Integrante pela Atividade</label>
+                    <select name="integrantes" id="integrantes" ng-model="atividade.integrantes" ng-options="pessoa.nome as pessoa.nome for pessoa in pessoas track by pessoa._id" ng-change="change()">
+                    </select>
+                </div>
+                <div>
+                    <button type="submit" class="cert right btn red darken-4 btn-default">Adicionar &nbsp; Atividade</button>
+                </div>
+            </form>
+            <!--Tabelas das atividades-->
+            <div>
+                <br>
+                <h5 class="listaAtividades col s12 center-align"><b>Lista de Atividades</b></h5>
+            </div>
+            <table class="bordered highlight responsive-table">
+                <thead>
+                    <tr>
+                        <th>Atividade</th>
+                        <th>Responsável</th>
+                        <th>Vagas</th>
+                        <th>Acesso</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="atividade in evento.atividades">
+                        <td>{{atividade.nome}}</td>
+                        <td>{{atividade.integrantes}}</td>
+                        <td>{{atividade.quantidadeVagas}}</td>
+                        <td>{{atividade.restricaoAcesso}}</td>
+                        <td></td>
+                    </tr>
+                </tbody>
+            </table>
+            <button ui-sref="eventosDetalhes.modeloCertificado" class="cert right btn red darken-4 btn-default">Avançar</button>
+            <!-- <button class="cert right btn red darken-4 btn-default">Publicar</button> -->
+            <button ui-sref="eventosDetalhes.equipe" class="cert right btn red darken-4 btn-default">Voltar</button>
+        </div>
+    </div>
+</div>
+
+<script src="../js/scripts.js"></script>

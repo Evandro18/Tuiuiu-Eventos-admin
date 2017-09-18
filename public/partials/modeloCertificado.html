@@ -1,0 +1,32 @@
+<div class="fundo">
+    <div class="row">
+        <div id="mCertificadoDeclaracao">
+            <form ng-submit="salva(form)" class="col-xs-12 col-md-12" id="formModelo">
+                <div "article">
+                    <br><br>
+                    <span><b>Escolha o Modelo do Certificado e o Modelo da Declaração</b></span>
+                    <br><br>
+                    <br><br>
+                    <div class="btn red darken-4" ng-model="mCertificado" ngf-select ngf-pattern="'.doc,.docx'">
+                        <span>Certificado</span>
+                    </div>
+                    <div class="waves red darken-4 btn">
+                        <a class=" center white-text" href="#!manual" id="manual" target="_blank">Manual</a>
+                        <!--     <a class=" center white-text" ui-sref="manual" id="manual">Manual</a>-->
+                        <br><br>
+                        <!--<p>Modelo de Certificado:</p>-->
+                        <p>{{mCertificado.name}}</p>
+                    </div>
+                    <br><br>
+                    <button class="cert right waves-effect btn red darken-4 btn-default">Salvar</button>
+                    <button ui-sref="eventosDetalhes.atividade" class="cert right waves-effect btn red darken-4 btn-default">Voltar</button>
+
+                    <!--<a href="#atividade" class="right btn disabled waves-effect waves-light btn">Avançar</a>-->
+                    <!--<a class="right waves-effect red darken-4 btn">Publicar</a>-->
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script src="../js/scripts.js"></script>

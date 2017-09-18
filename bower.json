@@ -1,0 +1,38 @@
+{
+  "name": "certificado",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Evandro <evandro18.goncalves@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Evandro18/Trabalho-5-Semestre",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-route": "^1.6.4",
+    "angular-resource": "^1.6.4",
+    "bootstrap": "^3.3.7",
+    "materialize": "^0.98.2",
+    "ng-file-upload": "^12.2.13",
+    "ng-flow": "^2.7.4",
+    "jquery": "^3.2.1",
+    "angular-ui-utils": "^3.0.0",
+    "ngMask": "angular-mask#^3.1.1",
+    "angular-ui-router": "^1.0.3",
+    "jquery-validation": "^1.16.0",
+    "ng-imgur": "^0.2.1",
+    "bcrypt": "*",
+    "angular-breadcrumb": "^0.5.0",
+    "file-saver": "^1.3.3"
+  },
+  "resolutions": {
+    "angular": "^1.6.4"
+  }
+}

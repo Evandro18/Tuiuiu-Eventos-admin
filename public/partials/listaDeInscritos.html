@@ -1,0 +1,41 @@
+<div class="fundo">
+    <div class="row">
+        <div id="listaDeInscritos" class="col s12 m12">
+            <div class="card col s12 m6">
+                <h5 class="header center">Atividades</h5>
+                <ul class="lista collection">
+                    <li class="lista collection-item dismissable" ng-repeat="atividade in atividades">
+                        <form action="">
+                            <!--ng-change="selecionaAtividades(statusAtividade, atividade._id)"-->
+                            <input type="checkbox" id="atividade{{atividade._id}}" name="atividade{{atividade._id}}" ng-model="statusAtividade">
+                            <label for="atividade{{atividade._id}}"></label>
+                            <label style="font-size:medium" class="x">{{atividade.nome}}</label>
+                            <i class="selecionar material-icons right" ng-click="filtraAtividades(atividade)">send</i>
+                            <!--<div>
+                            <label for="" ng-click="filtraAtividades(atividade._id)">{{atividade.nome}}</label>
+                        </div>-->
+                            <!-- <td ng-click="filtraAtividades(atividade._id)">{{atividade.nome}}</td>-->
+                    </li>
+                </ul>
+            </div>
+            <div class="card col s12 m6">
+                <h5 class="header center">Participantes</h5>
+                <ul class="lista collection" class="highlight">
+                    <li class="lista collection-item" class="highlight" ng-repeat="inscrito in dadosEvento.dadosInscritos | filter: filtroAtividades._id ">
+                        <form action=" ">
+                            <label style="font-size:medium" class="x col s12 m5 push-s7">{{inscrito.nome}}</label>
+                            <label style="font-size:medium" class="x">{{inscrito.cpf}}</label>
+                            <a ng-click="selecionainscritos(ativo, inscrito)"><i class="small gerd right material-icons ">delete</i></a>
+                        </form>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <button ng-click="salva() " class="cert right btn red darken-4 btn-default ">gerar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="../js/scripts.js "></script>

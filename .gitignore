@@ -1,0 +1,5 @@
+node_modules/
+public/vendor/
+.vscode/
+npm-debug*
+package-lock.json

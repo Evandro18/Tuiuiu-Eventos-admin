@@ -1,0 +1,78 @@
+<div class="fundo">
+    <div class="row">
+        <div id="equipe" class="col s12 m12">
+            <form id="fEquipe" name="fEquipe" ng-submit="salva(fEquipe)">
+                <div class="form-group col s12 m12">
+                    <label for="nome">Nome Completo:</label>
+                    <input id="nome" name="nome" type="text" class="form-control" ng-required="true" aria-required="true" ng-model="pessoa.nome" autofocus="autofocus" placeholder="Membro da Equipe">
+                </div>
+                <div class="form-group col s12 m4">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" name="cpf" class="form-control" mask="999.999.999-99" required title="Digite um CPF válido" ng-model="pessoa.cpf" placeholder="000.000.000-00" ng-change="validacpf()">
+                </div>
+                <div class="form-group col s12 m4">
+                    <label for="dataNascimento">Data Nascimento:</label>
+                    <input id="dataNascimento" name="dataNascimento" required ng-model="dataNascimento" type="text" class="datepicker">
+                </div>
+                <div class="form-group col s12 m4">
+                    <label for="nacionalidade">Nacionalidade:</label>
+                    <input id="nacionalidade" name="nacionalidade" type="text" class="form-control" required ng-model="pessoa.nacionalidade">
+                </div>
+                <!--lista de funçoes-->
+                <div class="form-group input-field col s12 m4">
+                    <select required ng-model="pessoa.funcao">
+                        <option value="" disabled selected>Escolha uma função</option>
+                        <option value="Ministrante">Ministrante</option>
+                        <option value="Colaborador">Colaborador</option>
+                        <option value="Monitor">Monitor</option>
+                        <option value="Avaliador">Avaliador</option>
+                        <option value="Coordenador">Coordenador</option>
+                        <label>Função:</label>
+                    </select>
+                </div>
+                <div class="form-group col s12 m4">
+                    <label for="estadoNascimento">Estado:</label>
+                    <select name="estadoNascimento" id="estadoNascimento" type="text" required data-ng-options="estado as estado for (estado, cidades) in listaEstados" data-ng-model="pessoa.estado" ng-change="mudaEstado(pessoa.estado)">
+                    </select>
+                </div>
+                <div class="form-group col s12 m4">
+                    <label for="municipioNascimento">Naturalidade:</label>
+                    <select id="municipioNascimento" name="municipioNascimento" type="text" required data-ng-options="cidade as cidade for cidade in cidades" data-ng-model="pessoa.naturalidade">
+                    </select>
+                </div>
+                <div class="form-group col s12 m4">
+                    <label for="email" data-error="voce esqueceu de digitar '@'">E-mail:</label>
+                    <input id="email" type="email" class="form-control" required ng-model="pessoa.email" placeholder="exemplo@gmail.com">
+                </div>
+                <div class="form-group col s12 m8">
+                    <label for="sobre">Observações:</label>
+                    <input id="sobre" type="text" class="form-control" ng-model="pessoa.sobre">
+                </div>
+                <div>
+                    <button type="submit" class="cert right btn red darken-4 btn-default">Adicionar&nbsp; Membro</button>
+                </div>
+            </form>
+            <div>
+                <h5 class="listaMembros col s12 m12 center-align"><b>Lista de membros da equipe</b></h5>
+            </div>
+            <table class="bordered highlight responsive-table">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Função</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="pessoa in evento.pessoas">
+                        <td align="right">{{pessoa.nome}}</td>
+                        <td align="left">{{pessoa.funcao}}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <button ui-sref="eventosDetalhes.atividade" class="cert right btn red darken-4 btn-default">Avançar</<button>
+                <button ui-sref="eventosDetalhes.evento" class="cert right btn red darken-4 btn-default">Voltar</<button>         
+        </div>
+    </div>
+</div>
+
+<script src="../js/scripts.js "></script>
